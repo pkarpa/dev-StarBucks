@@ -10,11 +10,20 @@
     },
     {
         "type": "File",
-        "name": "d:\\Project\\dev-project\\dev-Fill&Sin\\dev\\style.scss",
+        "name": "c:\\Users\\pavlo\\Web\\Lemon\\dev-StarBucks\\dev\\sass\\variables.scss",
         "parent_id": null,
-        "fsPath": "d:\\Project\\dev-project\\dev-Fill&Sin\\dev\\style.scss",
+        "fsPath": "c:\\Users\\pavlo\\Web\\Lemon\\dev-StarBucks\\dev\\sass\\variables.scss",
         "workspaceRoot": null,
         "workspacePath": null,
-        "id": "U2AJb6PcVDlMBoeQ"
+        "id": "NQHJ24l6g5u1I0eC"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\pavlo\\Web\\Lemon\\dev-StarBucks\\dev\\sass\\global.scss",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\pavlo\\Web\\Lemon\\dev-StarBucks\\dev\\sass\\global.scss",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "8bnr0FYKsx3J6SPg"
     }
 ]

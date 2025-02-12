@@ -5,13 +5,22 @@
 }
 
 html{
-     font-family: 'Montserrat';
-     font-size: 16px;
+     font-family: $font-primary;
+     font-size: $font-size;
+     background-color: $bg-color;
+     color: $text;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1,h2,h3,h4,h5,h6{
-     font-size: 600;
-     margin-bottom: .5em;
+    font-size: 600;
+    margin-bottom: .5em;
+    color: $title-color;
 }
 
 h1{
@@ -42,37 +51,19 @@ p{
      font-size: 1rem;
 }
 
-.container{
-     max-width: 1420px;
-     padding: 0px 12px;
-     margin-left: auto;
-     margin-right: auto;
- }
+img{
+    height: auto;
+    max-width: 100%;
+}
 
-.fw-100{
-    font-weight: 100;
+.container{
+    max-width: 1274px;
+    padding: 0px 12px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.fw-200{
-    font-weight: 200;
-}
-.fw-300{
-    font-weight: 300;
-}
-.fw-400{
-    font-weight: 400;
-}
-.fw-500{
-    font-weight: 500;
-}
-.fw-600{
-    font-weight: 600;
-}
-.fw-700{
-    font-weight: 700;
-}
-.fw-800{
-    font-weight: 800;
-}
-.fw-900{
-    font-weight: 900;
+
+::selection{
+    color:$bg-color;
+    background-color: $primary-color;
 }
