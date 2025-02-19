@@ -1,19 +1,39 @@
 .footer{
     margin-top: auto;
     background-color: $bg-accent-color;
-    padding: 38px 0;
+    padding: 44px 0;
+    overflow: hidden;
 
     &-row{
         display: flex;
-        margin-bottom: 89px;
+        align-items: flex-start;
+        margin-bottom: 116px;
+    }
+
+    .container{
+        position: relative;
+        z-index: 1;
+    }
+
+    &__logo{
+        position: relative;
+        &:before{
+            @include footer-light;
+            background-image: url("./assets/img/decorate__footer-md.png");
+            width: 371px;
+            height: 260px;
+            transform: translate(-50%,-50%);
+        }
     }
 
     &-nav{
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
-        max-width: 761px;
+        max-width: 784px;
+        padding-top: 4px;
         width: 100%;
+        position: relative;
         
         &__column{
             padding: 0 12px;
@@ -21,13 +41,13 @@
 
         &__title{
             color: #BBB3B3;
-            margin-bottom: 8px;
+            margin-bottom: 13px;
             font-size: 20px;
             font-weight: 400;
         }
 
         &__list{
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             &:last-child{
                 margin-bottom: 0;
             }
@@ -39,14 +59,36 @@
             color: #575454;
             text-decoration: none;
         }
+
+        &:before{
+            @include footer-light;
+            background-image: url("./assets/img/decorate__footer-lg.png");
+            width: 1250px;
+            height: 906px;
+        }
     }
 
     &-contacts{
         display: flex;
+        align-items: center;
     }
 
     &-social{
         margin-left: auto;
+        &__item{
+            position: relative;
+            display: inline-block;
+            &:before{
+                position: absolute;
+                content: "";
+                left: -75px;
+                top: -40px;
+                background: center/contain no-repeat;
+                background-image: url("./assets/img/decorate__footer-sm.png");
+                width: 168px;
+                height: 153px;
+            }
+        }
     }
 
     &-phones{
@@ -57,6 +99,13 @@
             font-weight: 500;
             color: $secondary-color;
             text-decoration: none;
+            position: relative;
+            &:before{
+                @include footer-light;
+                background-image: url("./assets/img/decorate__footer-md.png");
+                width: 371px;
+                height: 260px;
+            }
         }
     }
 }
