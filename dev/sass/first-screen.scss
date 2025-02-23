@@ -1,0 +1,10 @@
+.banner{
+    .container{
+        display: flex;
+        gap: 24px;
+    }
+
+    &-content{
+        max-width: 574px;
+    }
+}
