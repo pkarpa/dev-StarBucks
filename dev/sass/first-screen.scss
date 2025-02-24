@@ -7,4 +7,21 @@
     &-content{
         max-width: 574px;
     }
+
+    h1{
+        font-weight: 800;
+        margin-bottom: 54px;
+    }
+
+    .banner-description{
+        @extend h6;
+        color: $text;
+        font-weight: 400;
+        margin-bottom: 54px;
+    }
+
+    &-btn-group{
+        display: flex;
+        gap: 16px;
+    }
 }
