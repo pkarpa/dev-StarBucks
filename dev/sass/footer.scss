@@ -18,7 +18,7 @@
     &__logo{
         position: relative;
         &:before{
-            @include footer-light;
+            @include template-light;
             background-image: url("./assets/img/decorate__footer-md.png");
             width: 371px;
             height: 260px;
@@ -61,7 +61,7 @@
         }
 
         &:before{
-            @include footer-light;
+            @include template-light;
             background-image: url("./assets/img/decorate__footer-lg.png");
             width: 1250px;
             height: 906px;
@@ -101,7 +101,7 @@
             text-decoration: none;
             position: relative;
             &:before{
-                @include footer-light;
+                @include template-light;
                 background-image: url("./assets/img/decorate__footer-md.png");
                 width: 371px;
                 height: 260px;
