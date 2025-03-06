@@ -12,6 +12,7 @@
     }
 
     h1{
+        font-size: min(6vw,80px);
         font-weight: 800;
         margin-bottom: 54px;
         position: relative;
@@ -35,6 +36,7 @@
 
     &-btn-group{
         display: flex;
+        flex-wrap: wrap;
         gap: 16px;
         margin-bottom: 54px;
         position: relative;
@@ -103,19 +105,23 @@
     }
 
     &-discount{
+        --size: 14.154vw;
+        --max-size: 184px;
         position: absolute;
         top: -15px;
         right: 38px;
-        width: 184px;
-        height: 184px;
+        width: var(--size);
+        height: var(--size);
+        max-width: var(--max-size);
+        max-height: var(--max-size);
         display: flex;
-        background: url("./assets/img/bg-discount.svg") center no-repeat;
+        background: url("./assets/img/bg-discount.svg") center/100% no-repeat;
         justify-content: center;
         align-items: center;
         text-align: center;
         border-radius: 50%;
-        font-size: 54px;
         font-weight: 500;
+        
         
         &::before{
             position: absolute;
@@ -130,5 +136,18 @@
             box-shadow: -4.56px 15.52px 26.48px #143e287a;
         }
 
+        &__number{
+            font-size: min(4.231vw,55px);
+            transform: rotate(-12deg);
+        }
+    }
+
+    &-line{
+        width: 1078px;
+        height: 677px;
+        position:absolute;
+        top: 188px;
+        right: -470px;
+        z-index: -3;
     }
 }

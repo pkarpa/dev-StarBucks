@@ -1,4 +1,4 @@
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024.99px) {
     header {
         padding: 38px 0;
 
@@ -11,7 +11,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            height: 98px;
+            height: 92px;
             width: 100%;
             background-color: #121517;
             z-index: 1;
@@ -25,6 +25,68 @@
 
     .container{
         padding: 0 25px;
+    }
+
+    .banner{
+
+        .container{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        h1{
+            font-size: min(12vw,48px);
+            margin-bottom: 36px;
+        }
+
+        .banner-description{
+            font-size: 0.75rem;
+            margin-bottom: 36px;
+        }
+
+        &-btn-group{
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+
+        &-img{
+            padding: 0 96px;
+            margin-right: initial;
+            &::before{
+                display: none;
+            }
+            &::after{
+                display: none;
+            }
+        }
+
+        &-discount{
+            top:0;
+            right: 110px;
+        }
+
+        &-line{
+            width: 100%;
+            height: auto;
+            top: 45px;
+            right: -20px;
+        }
+
+        .banner-statistics{
+            gap: 44px;
+        }
+
+        .banner-statistic-item{
+            width: auto;
+        }
+
+        .banner-statistic__title {
+            font-size: 42px;
+        }
+
+        .banner-statistic__description {
+            font-size: 12px;
+        }
     }
 
     .menu__list{
@@ -52,14 +114,19 @@
         }
     }
 
-    .btn.btn-outline{
-        width: 52px;
-        height: 52px;
-        border-radius: 18px;
-    }
+    .btn
+    {
+        font-size: 16px;
+        padding: 17px 24px;
+        &.btn-outline{
+            width: 52px;
+            height: 52px;
+            border-radius: 18px;
 
-    .btn.btn-outline svg{
-        height: 22px;
+            svg{
+                height: 22px;
+            }
+        }
     }
 
     .footer{
