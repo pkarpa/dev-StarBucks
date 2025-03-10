@@ -60,11 +60,6 @@
             }
         }
 
-        &-discount{
-            top:0;
-            right: 110px;
-        }
-
         &-line{
             width: 100%;
             left: 8vw;
@@ -87,7 +82,14 @@
         .banner-statistic__description {
             font-size: 12px;
         }
+
+        .accent-label{
+            top:0;
+            right: 110px;
+        }
     }
+
+    
 
     .menu__list{
         flex-direction: column;

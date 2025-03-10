@@ -104,10 +104,14 @@ a{
     height: 0;
 }
 
-.gradient{
+.gradient-text{
     background-clip: text;
     color: transparent;
     background-image: linear-gradient(223deg, $primary-color 0%, $secondary-color 100%);
+}
+
+.gradient-background{
+    background-image: linear-gradient(245deg, $primary-color 0%, $secondary-color 100%);
 }
 
 .btn{
@@ -160,5 +164,60 @@ a{
         &::after {
             background-image: url("./assets/img/btn-hover-secondary.svg");
         }
+    }
+}
+
+.accent-label{
+    --size: 14.154vw;
+    --max-size: 184px;
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    max-width: var(--max-size);
+    max-height: var(--max-size);
+    display: flex;
+    background: url("./assets/img/bg-discount.svg") center/100% no-repeat;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 500;
+    text-transform: uppercase;
+    
+    
+    &::before{
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        border-radius: 50%;
+        z-index: -1;
+        box-shadow: -4.56px 15.52px 26.48px #143e287a;
+    }
+
+    &__number{
+        font-size: min(4.231vw,55px);
+        transform: rotate(-12deg);
+    }
+}
+
+.accent-label-sm{
+    @extend .accent-label;
+    font-size: min(4.231vw,32px);
+    --max-size: 133px;
+}
+
+.white-wrapper{
+    background:  linear-gradient(230deg, #fff 3.94%, #e5e5e5 64.08%, #fbfbfb 88.62%);
+
+    h1,h2,h3,h4,h5,h6{
+        color: #121517;
+    }
+
+    p{
+        color: #292c2d;
     }
 }

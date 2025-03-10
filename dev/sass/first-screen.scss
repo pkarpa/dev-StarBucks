@@ -71,6 +71,11 @@
         font-weight: 400;
     }
 
+    .accent-label{
+        top: -15px;
+        right: 38px;
+    }
+
     &-img{
         margin-right: 43px;
         position: relative;
@@ -102,44 +107,6 @@
             z-index: -3;
         }
 
-    }
-
-    &-discount{
-        --size: 14.154vw;
-        --max-size: 184px;
-        position: absolute;
-        top: -15px;
-        right: 38px;
-        width: var(--size);
-        height: var(--size);
-        max-width: var(--max-size);
-        max-height: var(--max-size);
-        display: flex;
-        background: url("./assets/img/bg-discount.svg") center/100% no-repeat;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-radius: 50%;
-        font-weight: 500;
-        
-        
-        &::before{
-            position: absolute;
-            content: "";
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            width: calc(100% - 40px);
-            height: calc(100% - 40px);
-            border-radius: 50%;
-            z-index: -1;
-            box-shadow: -4.56px 15.52px 26.48px #143e287a;
-        }
-
-        &__number{
-            font-size: min(4.231vw,55px);
-            transform: rotate(-12deg);
-        }
     }
 
     &-line{
