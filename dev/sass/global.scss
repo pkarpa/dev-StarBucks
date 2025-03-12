@@ -169,21 +169,21 @@ a{
 
 .accent-label{
     --size: 14.154vw;
-    --max-size: 184px;
+    --max-size: 167px;
     position: absolute;
     width: var(--size);
     height: var(--size);
     max-width: var(--max-size);
     max-height: var(--max-size);
     display: flex;
-    background: url("./assets/img/bg-discount.svg") center/100% no-repeat;
     justify-content: center;
     align-items: center;
     text-align: center;
     border-radius: 50%;
     font-weight: 500;
     text-transform: uppercase;
-    
+    box-shadow: -4.56px 15.52px 26.48px #143e287a;
+    z-index: 1;
     
     &::before{
         position: absolute;
@@ -191,11 +191,11 @@ a{
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        width: calc(100% - 40px);
-        height: calc(100% - 40px);
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
         border-radius: 50%;
         z-index: -1;
-        box-shadow: -4.56px 15.52px 26.48px #143e287a;
+        background: url("./assets/img/bg-discount.svg") center/100% no-repeat;
     }
 
     &__number{
@@ -207,7 +207,7 @@ a{
 .accent-label-sm{
     @extend .accent-label;
     font-size: min(4.231vw,32px);
-    --max-size: 133px;
+    --max-size: 113px;
 }
 
 .white-wrapper{
