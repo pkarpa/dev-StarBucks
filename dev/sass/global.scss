@@ -70,6 +70,24 @@ a{
     }
 }
 
+section{
+    margin-bottom: $section-margin;
+}
+
+.template-title{
+    font-size: min(6vw,80px);
+    font-weight: 800;
+    position: relative;
+}
+
+.template-description{
+    @extend h6;
+    color: $text;
+    font-weight: 400;
+    margin-bottom: 54px;
+    max-width: 480px;
+}
+
 .container{
     max-width: 1278px;
     padding: 0px 12px;

@@ -1,4 +1,43 @@
+.we-make{
+    .container{
+        position: relative;
+        display: flex;
+        gap: 0 24px;
+        justify-content: space-between;
+    }
+
+    &__img-box{
+        max-width: 465px;
+        position: relative;
+
+        img{
+            @include clip-right;
+        }
+
+        &::before{
+            content: "";
+            background-color: $primary-color;
+            top: 40px;
+            right: 49px;
+            width: calc(100% - 3px);
+            height: calc(100% - 3px);
+            position: absolute;
+            z-index: -1;
+            @include clip-right;
+        }
+    }
+
+    &__content-box{
+        max-width: 456px;
+        width: 100%;
+    }
+}
+
 .we-make__line{
+    position: absolute;
     width: 993px;
     height: 999px;
+    right: 0;
+    bottom: 0;
+    display: none;
 }

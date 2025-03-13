@@ -18,6 +18,10 @@
         }
     }
 
+    section{
+        margin-bottom: $section-mobile-margin;
+    }
+
     .header-logo{
         max-width: 114px;
         z-index: 1;
@@ -27,20 +31,25 @@
         padding: 0 25px;
     }
 
-    .banner{
+    .template-title{
+        font-size: min(12vw,48px);
+    }
 
+    .template-description{
+        font-size: 0.75rem;
+    }
+
+    .banner{
         .container{
             flex-direction: column-reverse;
             align-items: center;
         }
 
-        h1{
-            font-size: min(12vw,48px);
+        .template-title{
             margin-bottom: 36px;
         }
 
-        .banner-description{
-            font-size: 0.75rem;
+        .template-description{
             margin-bottom: 36px;
         }
 
@@ -91,10 +100,6 @@
 
     .accent-label-sm{
         font-size: 24px;
-    }
-
-    .advantages{
-        margin-bottom: 68px;
     }
 
     .advantages-row{
