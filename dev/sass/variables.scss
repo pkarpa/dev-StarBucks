@@ -25,10 +25,16 @@ $section-mobile-margin: 64px;
     z-index: -1;
 }
 
-@mixin clip-right{
-    -webkit-mask: url(./assets/img/we-make__bg-right.svg);
-    -o-mask: url(./assets/img/we-make__bg-right.svg);
-    mask: url(./assets/img/we-make__bg-right.svg);
+@mixin clip-top-right{
+    -webkit-mask: url(./assets/img/we-make__bg-top-right.svg);
+    -o-mask: url(./assets/img/we-make__bg-top-right.svg);
+    mask: url(./assets/img/we-make__bg-top-right.svg);
+}
+
+@mixin clip-bottom-right{
+    -webkit-mask: url(./assets/img/we-make___bg-bottom-right.svg);
+    -o-mask: url(./assets/img/we-make___bg-bottom-right.svg);
+    mask: url(./assets/img/we-make___bg-bottom-right.svg);
 }
 
 @mixin clip-left{

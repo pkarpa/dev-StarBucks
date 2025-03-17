@@ -70,6 +70,10 @@ a{
     }
 }
 
+button{
+    cursor: pointer;
+}
+
 section{
     margin-bottom: $section-margin;
 }
@@ -78,6 +82,7 @@ section{
     font-size: min(6vw,80px);
     font-weight: 800;
     position: relative;
+    letter-spacing: -0.03em;
 }
 
 .template-description{
@@ -86,6 +91,7 @@ section{
     font-weight: 400;
     margin-bottom: 54px;
     max-width: 480px;
+    letter-spacing: -0.02em;
 }
 
 .container{
@@ -93,6 +99,10 @@ section{
     padding: 0px 12px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.overflow-hidden{
+    overflow: hidden;
 }
 
 ::selection{
@@ -135,7 +145,7 @@ section{
 .btn{
     font-size: 24px;
     padding: 25px 54px;
-    display: inline-block;
+    display: inline-flex;
     border-radius: 83px;
     border: none;
     text-decoration: none;
@@ -159,6 +169,12 @@ section{
             height: 500%;
             transition: .5s;
         }
+    }
+
+    svg{
+        --size: 28px;
+        height: var(--size);
+        width: var(--size);
     }
 
     &.btn-primary{
