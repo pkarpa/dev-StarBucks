@@ -14,7 +14,11 @@
             height: 92px;
             width: 100%;
             background-color: #121517;
-            z-index: 1;
+            z-index: 3;
+        }
+
+        .btn-burger{
+            z-index: 3;
         }
     }
 
@@ -24,7 +28,7 @@
 
     .header-logo{
         max-width: 114px;
-        z-index: 1;
+        z-index: 3;
     }
 
     .container{
@@ -93,8 +97,8 @@
         }
 
         .accent-label{
-            top:0;
-            right: 110px;
+            top: 6px;
+            right: 105px;
         }
     }
 
@@ -150,6 +154,8 @@
     }
 
     .mobile-container{
+        --gap: 72px;
+        flex-direction: column;
         position: absolute;
         left: 0;
         top: 0px;
@@ -161,11 +167,16 @@
         transition: .5s;
         visibility: hidden;
         transform: translate(0, -100%);
+        z-index: 2;
 
         &.show{
-            top: 98px;
+            top: 92px;
             transform: translate(0, 0);
             visibility: visible;
+        }
+
+        .btn-secondary{
+            margin: 0 auto;
         }
     }
 

@@ -1,16 +1,28 @@
 header{
 	position: relative;
 	padding: 48px 0;
+	--gap: 94px;
 
 	> .container {
 		display: flex;
 		align-items: center;
-		gap: 94px;
+		gap: var(--gap);
 	}
 
 	.btn-burger {
 		padding: 10px 24px;
 		margin-left: auto;
+	}
+
+	.mobile-container{
+		display: flex;
+		width: 100%;
+		align-items: center;
+		gap: var(--gap);
+
+		.btn{
+			margin-left: auto;
+		}
 	}
 }
 

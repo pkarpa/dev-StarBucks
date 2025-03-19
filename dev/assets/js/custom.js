@@ -8,25 +8,37 @@
 
   // modal
 
-  const btnShowModal = document.querySelector('[data-triger-modal="process"]');
-  const btnCloseModal = document.querySelector('[data-modal="close"]');
+  const modalTrigers = document.querySelectorAll('[data-triger-modal]');
+  const modalClose = document.querySelectorAll('[data-modal-close]');
   const overlay = document.querySelector(".overlay");
   const body = document.querySelector("body");
-  const modal = document.querySelector(".modal");
+ 
 
-  function showModal(event){
-    event.preventDefault();
-    overlay.classList.add("show");
-    body.classList.add("overflow-hidden");
-    modal.classList.add("show");
+  function showModal(){
+    body.classList.add('overflow-hidden');
+    overlay.classList.add('show');
   }
 
-  function closeModal(event){
-    event.preventDefault();
-    modal.classList.remove("show");
-    overlay.classList.remove("show");
-    body.classList.remove("overflow-hidden");
+  modalTrigers.forEach(item => {
+    item.addEventListener('click', function(event){
+      event.preventDefault();
+
+      const dataTriger = item.getAttribute('data-triger-modal');
+      const modal = document.querySelector('#' + dataTriger);
+
+      showModal();
+      modal.classList.add('show');
+    })
+  });
+
+  function closeModal(){
+    const openModal = document.querySelector('.modal.show');
+    body.classList.remove('overflow-hidden');
+    overlay.classList.remove('show');
+    openModal.classList.remove("show");
   }
 
-  btnShowModal.addEventListener("click", showModal);
-  btnCloseModal.addEventListener("click", closeModal);
+  modalClose.forEach(item => {
+    item.addEventListener('click', closeModal)
+  });
+  

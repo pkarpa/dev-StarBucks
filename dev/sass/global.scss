@@ -105,6 +105,30 @@ section{
     overflow: hidden;
 }
 
+.g-0 {
+    gap: 0;
+}
+
+.g-1 {
+    gap: 1rem;
+}
+
+.g-2 {
+    gap: 2rem;
+}
+
+.g-3 {
+    gap: 3rem;
+}
+
+.g-4 {
+    gap: 4rem;
+}
+
+.g-5 {
+    gap: 5rem;
+}
+
 ::selection{
     color:$bg-color;
     background-color: $primary-color;
@@ -197,6 +221,18 @@ section{
 
         &::after {
             background-image: url("./assets/img/btn-hover-secondary.svg");
+        }
+    }
+
+    &.btn-close{
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 5px 10px;
+        background-color: $bg-color;
+
+        &:hover{
+            color: #ff0000;
+            border-color: #ff0000;
         }
     }
 }
