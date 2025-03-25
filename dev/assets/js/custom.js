@@ -1,5 +1,65 @@
   const burger = document.querySelector('#btn-burger');
   const mobileContainer = document.querySelector('#mobile-container');
+  const proccessVideo = document.querySelector('#video');
+  const playBnt = document.querySelector('#play');
+  const stopBnt = document.querySelector('#stop');
+  const pauseBnt = document.querySelector('#pause');
+  const madeBnt = document.querySelector('#how-made');
+  const roasterBnt = document.querySelector('#roaster');
+  const tasteBnt = document.querySelector('#taste');
+
+  playBnt.addEventListener('click', () => {
+    playVideo();
+    console.log('play');
+  })
+
+  pauseBnt.addEventListener('click', () => {
+    pauseVideo();
+    console.log('pause');
+  })
+
+  stopBnt.addEventListener('click', () => {
+    stopVideo();
+    console.log('stop');
+  })
+
+  madeBnt.addEventListener('click', () => {
+    currentHowIsMade();
+  })
+
+  roasterBnt.addEventListener('click', () => {
+    currentRoaster();
+  })
+
+  tasteBnt.addEventListener('click', () => {
+    currentTaste();
+  })
+
+  function playVideo(){
+    proccessVideo.play();
+  }
+
+  function stopVideo(){
+    proccessVideo.pause();
+    proccessVideo.currentTime = 0;
+  }
+
+  function pauseVideo(){
+    proccessVideo.pause();
+  }
+
+  function currentHowIsMade(){
+    proccessVideo.currentTime = 65;
+  }
+
+  function currentRoaster(){
+    proccessVideo.currentTime = 128;
+  }
+
+  function currentTaste(){
+    proccessVideo.currentTime = 170;
+  }
+
 
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');
@@ -27,7 +87,13 @@
       const modal = document.querySelector('#' + dataTriger);
 
       showModal();
-      modal.classList.add('show');
+
+      if (modal.classList.contains('video-procecess')) {
+        modal.classList.add('show')
+        playVideo()
+      } else {
+          modal.classList.add('show')
+      }
     })
   });
 
@@ -36,6 +102,7 @@
     body.classList.remove('overflow-hidden');
     overlay.classList.remove('show');
     openModal.classList.remove("show");
+    stopVideo();
   }
 
   modalClose.forEach(item => {

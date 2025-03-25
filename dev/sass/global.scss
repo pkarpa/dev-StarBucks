@@ -19,11 +19,16 @@ body{
     overflow-x: hidden;
 }
 
+main{
+    overflow-x: clip;
+}
+
 h1,h2,h3,h4,h5,h6{
     font-size: 600;
     margin-bottom: .5em;
     color: $title-color;
 }
+
 
 h1{
      font-size: 5rem;
@@ -103,6 +108,11 @@ section{
 
 .overflow-hidden{
     overflow: hidden;
+}
+
+.d-flex{
+    display: flex;
+    align-items: center;
 }
 
 .g-0 {
@@ -202,6 +212,9 @@ section{
     }
 
     &.btn-primary{
+        display: flex;
+        align-items: center;
+        gap: 5px;
         font-weight: 600;
         background-image: linear-gradient(210deg, $primary-color 0%, $secondary-color 100%);
     }
@@ -234,6 +247,13 @@ section{
             color: #ff0000;
             border-color: #ff0000;
         }
+    }
+
+    &.btn-player{
+        border: 1px solid $primary-color;
+        background-color: $bg-color;
+        border-radius: 20px;
+        padding: 5px 10px;
     }
 }
 

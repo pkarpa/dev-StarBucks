@@ -20,17 +20,19 @@
 
 .modal{
     position: fixed;
-    top: 100px;
+    top: 50%;
     left: 50%;
     z-index: 10;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     border: 1px solid #fff;
     border-radius: 10px;
-    padding: 24px;
+    padding: 14px;
     backdrop-filter: blur(15px);
     visibility: hidden;
     opacity: 0;
     transition: .5s;
+    max-width: 991px;
+    width: 100%;
 
     &.show{
         opacity: 1;
@@ -39,15 +41,44 @@
     
     h3{
         text-align: center;
+        margin-bottom: 0;
+    }
+
+    h5{
+        text-align: center;
+        margin-bottom: 0;
+        cursor: pointer;
     }
 
     &-content{
         color: #fff;
-        margin-bottom: 16px;
+        padding-bottom: 12px;
+
+        video{
+            padding-bottom: 12px;
+            width: 100%;
+        }
+        
+    }
+
+    .video-content{
+        padding-bottom: 0;
     }
 
     .btn{
         font-size: 16px;
         padding: 5px 10px;
+    }
+
+    .player-controls{
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    .x-close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
 }
