@@ -31,6 +31,12 @@ $section-mobile-margin: 64px;
     mask: url(./assets/img/we-make__bg-top-right.svg);
 }
 
+@mixin clip-top-right-sm{
+    -webkit-mask: url(./assets/img/we-make__bg-top-to-right-sm.svg) no-repeat;
+    -o-mask: url(./assets/img/we-make__bg-top-to-right-sm.svg) no-repeat;
+    mask: url(./assets/img/we-make__bg-top-to-right-sm.svg) no-repeat;
+}
+
 @mixin clip-bottom-right{
     -webkit-mask: url(./assets/img/we-make___bg-bottom-right.svg);
     -o-mask: url(./assets/img/we-make___bg-bottom-right.svg);

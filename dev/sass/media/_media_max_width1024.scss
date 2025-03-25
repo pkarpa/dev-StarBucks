@@ -180,6 +180,79 @@
         }
     }
 
+    .we-make{
+        .container{
+            flex-direction: column;
+            align-items: center;
+            max-width: 580px;
+            width: 100%;
+        }
+
+        &__img-box{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 62px;
+            img{
+                max-width: 164px;
+                width: 100%;
+            }
+        }
+
+        &__img-box::before{
+            @include clip-top-right-sm;
+            top: 12px;
+            right: 16px;
+        }
+
+        &__img-box::after{
+            left: -152px;
+            bottom: -175px;
+        }
+
+        &__content-box::before{
+            background-image: url(./assets/img/decorate-we-make-light.png);
+            right: 40px;
+            top: -100px;
+        }
+
+        .accent-label-sm{
+            left: initial;
+            right: -28px;
+            top: 75px;
+            --max-size: 78px;
+        }
+
+        &__line{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-53%, -70%) rotate(-5deg);
+            z-index: -3;
+        }
+
+        &__process{
+            .btn{
+                font-size: 14px;
+                padding: 12px 24px;
+            }
+
+            img{
+                max-height: 164px;
+                max-width: 256px;
+                filter: blur(0);
+                content: url('./assets/img/we-make__cooking-sm.png');
+                @include clip-top-right;
+            }
+        }
+    }
+
+    .modal{
+        .player-controls{
+            flex-direction: column-reverse;
+        }
+    }
+
     .btn
     {
         font-size: 16px;

@@ -8,6 +8,7 @@
 
     &__img-box{
         max-width: 465px;
+        width: 100%;
         position: relative;
 
         img{
@@ -25,12 +26,41 @@
             z-index: -1;
             @include clip-top-right;
         }
+
+        &::after{
+            content: "";
+            --size: 500px;
+            position: absolute;
+            background: center / contain no-repeat;
+            z-index: -1;
+            background-image: url(./assets/img/decorate-we-make-accent.png);
+            width: var(--size);
+            height: var(--size);
+            left: -230px;
+            bottom: -235px;
+        }
     }
 
     &__content-box{
+        position: relative;
         max-width: 456px;
         width: 100%;
+
+        &::before{
+            content: "";
+            --size: 500px;
+            position: absolute;
+            background: center / contain no-repeat;
+            z-index: -1;
+            background-image: url(./assets/img/decorate-we-make-accent.png);
+            width: var(--size);
+            height: var(--size);
+            right: -90px;
+            top: -125px;
+        }
     }
+
+
 
     .accent-label-sm
     {
