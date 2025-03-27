@@ -109,3 +109,13 @@
     item.addEventListener('click', closeModal)
   });
   
+// Swiper
+const swiper = new Swiper('.swiper', {
+  spaceBetween: 48,
+  slidesPerView: 4,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
