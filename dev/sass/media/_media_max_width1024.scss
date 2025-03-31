@@ -319,9 +319,54 @@
         }
     }
 
-    
+    .products-title-wrapper{
+        flex-direction: column;
+        .template-title{
+            margin-right: 0;
+            margin-bottom: 36px;
+        }
+    }
+
+    .product{
+        &-title{
+            font-size: 22px;
+        }
+
+        &-description{
+            font-size: 14px;
+        }
+
+        &-price{
+            font-size: 22px;
+        }
+
+        &-volume{
+            font-size: 14px;
+        }
+
+        .btn{
+            font-size: 12px;
+            padding: 10px 22px;
+        }
+
+        &-img{
+            --size: 120px;
+
+            img{
+                height: 160px;
+            }
+        }
+    }
+
+
+    .carousel-wrapper {
+        .swiper {
+            max-width: 392px;
+        }
+    }
+
     .swiper-navigation {
-        max-width: 730px;
+        max-width: 544px;
     }
     
 }
