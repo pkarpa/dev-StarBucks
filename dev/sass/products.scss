@@ -1,7 +1,7 @@
 .products-title-wrapper{
     display: flex;
     align-items: center;
-    margin-bottom: 47px;
+    margin-bottom: 56px;
 
     .template-title{
         max-width: 392px;
@@ -17,6 +17,34 @@
 .swiper-slide-active{
     .product{
         border: 1px solid $secondary-color;
+    }
+}
+
+.carousel-wrapper {
+    position: relative;
+    .swiper {
+        max-width: 1252px;
+        margin: 0 auto;
+    }
+}
+
+.swiper-navigation {
+    height: 0;
+    width: 100%;
+    max-width: 1492px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    @include transform-centered;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+        transform: rotate(-90deg);
     }
 }
 

@@ -1,3 +1,14 @@
+@media screen and (max-width: 1233.99px) {
+    .carousel-wrapper {
+        .swiper {
+            max-width: 579px;
+        }
+    }
+    .swiper-navigation {
+        max-width: 842px;
+    }
+}
+
 @media screen and (max-width: 1199.99px) {
     .advantages-row{    
         .accent-label-sm{
