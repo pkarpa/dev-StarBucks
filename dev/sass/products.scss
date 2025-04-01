@@ -4,9 +4,11 @@
     margin-bottom: 56px;
 
     .template-title{
+        --margin: 72px;
         max-width: 392px;
-        margin-right: 72px;
+        margin-right: var(--margin);
         margin-bottom: 0;
+        margin-left: 0;
     }
 
     .template-description{
