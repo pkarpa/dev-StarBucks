@@ -110,7 +110,7 @@
   });
   
 // Swiper
-const swiper = new Swiper('.swiper', {
+const swiperProduct = new Swiper('.swiper', {
   slidesPerView: 1,
   loop: true,
   spaceBetween: 24,
@@ -141,3 +141,28 @@ const swiper = new Swiper('.swiper', {
       }
   }
 });
+
+var init = false;
+var swiper;
+function swiperCard() {
+  if (window.innerWidth <= 768) {
+    if (!init) {
+      init = true;
+      swiper = new Swiper(".slider-cards-js", {
+        direction: "horizontal",
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 32,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    }
+  } else if (init) {
+    swiper.destroy();
+    init = false;
+  }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
