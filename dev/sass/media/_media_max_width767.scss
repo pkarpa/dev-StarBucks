@@ -33,4 +33,21 @@
     .swiper-navigation {
         max-width: 336px;
     }
+
+    .events{
+        .carousel-wrapper{
+            max-width: 184px;
+        }
+
+        .event-title{
+            font-size: 18px;
+        }
+
+        .event-item{
+            .btn{
+                font-size: 14px;
+                padding: 14px 30px;
+            }
+        }
+    }
 }

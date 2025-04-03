@@ -365,6 +365,49 @@
         }
     }
 
+    .events{
+        .carousel-wrapper{
+            max-width: 392px;
+            margin: 0 auto;
+        }
+
+
+        .event-title{
+            font-size: 22px;
+        }
+
+        .swiper-event-navigation{
+            top: 64%
+        }
+
+        &__line{
+            display: none;
+        }
+
+        .event-item{
+            .btn{
+                font-size: 14px;
+                padding: 20px 48px;
+            }
+        }
+    }
+
+    .events-area-1::before{
+        content: none;
+    }
+    .events-area-2::before{
+        content: none;
+    }
+    .events-area-3::before{
+        content: none;
+    }
+    .events-area-4::before{
+        content: none;
+    }
+    .events-area-5::before{
+        content: none;
+    }
+    
     .swiper-navigation {
         max-width: 544px;
     }

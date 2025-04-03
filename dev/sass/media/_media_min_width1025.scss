@@ -2,4 +2,23 @@
     .btn-burger{
         display: none;
     }
+
+    .events{
+        .swiper-events{
+            overflow: visible;
+        }
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+    }
+
+    .swiper-event-button-next.btn.btn-outline,
+    .swiper-event-button-prev.btn.btn-outline{
+        display: none;
+    }
 }
