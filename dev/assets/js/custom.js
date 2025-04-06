@@ -167,24 +167,55 @@ const swiperProduct = new Swiper('.swiper-product', {
 // swiperCard();
 // window.addEventListener("resize", swiperCard);
 
-let eventsSwiper = new Swiper(".swiper-events", {
-  loop: true,
-  spaceBetween: 24,
-  navigation: {
-    nextEl: ".swiper-event-button-next",
-    prevEl: "swiper-event-button-prev",
-  },
-});
+//mobile only swiper
 
+let eventSwiper;
 let swiperEventsMediaQuery = window.matchMedia("(max-width: 1025px)");
-function checkedBrakpoint(swiperEventsMediaQuery){
+
+function checkedBreakpoint(swiperEventsMediaQuery){
   if(swiperEventsMediaQuery.matches){
-    return;
-  }
-  else{
-    eventsSwiper.destroy();
+    if(!eventSwiper){
+      eventSwiper = new Swiper(".swiper-events", {
+        loop: true,
+        spaceBetween: 24,
+        navigation: {
+          nextEl: ".swiper-event-button-next",
+          prevEl: ".swiper-event-button-prev",
+        },
+      });
+    }
+    else{
+      if(eventSwiper){
+        eventSwiper.destroy(true,true);
+        eventSwiper=null;
+      }
+    }
   }
 }
 
-checkedBrakpoint(swiperEventsMediaQuery);
-window.addEventListener("resize", checkedBrakpoint(swiperEventsMediaQuery));
+checkedBreakpoint(swiperEventsMediaQuery);
+
+swiperEventsMediaQuery.addEventListener("change",checkedBreakpoint);
+
+
+// let eventsSwiper = new Swiper(".swiper-events", {
+//   loop: true,
+//   spaceBetween: 24,
+//   navigation: {
+//     nextEl: ".swiper-event-button-next",
+//     prevEl: "swiper-event-button-prev",
+//   },
+// });
+
+// let swiperEventsMediaQuery = window.matchMedia("(max-width: 1025px)");
+// function checkedBrakpoint(swiperEventsMediaQuery){
+//   if(swiperEventsMediaQuery.matches){
+//     return;
+//   }
+//   else{
+//     eventsSwiper.destroy();
+//   }
+// }
+
+// checkedBrakpoint(swiperEventsMediaQuery);
+// window.addEventListener("change", checkedBrakpoint(swiperEventsMediaQuery));
