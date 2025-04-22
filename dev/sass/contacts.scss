@@ -1,0 +1,109 @@
+.contacts{
+    .container{
+        position: relative;
+        display: flex;
+        gap: 0 24px;
+        justify-content: space-between;
+        &::before{
+            content: "";
+            --size: 500px;
+            position: absolute;
+            background: center / contain no-repeat;
+            z-index: -1;
+            background-image: url(./assets/img/decorate-contacts-light.png);
+            width: var(--size);
+            height: var(--size);
+            bottom: -370px;
+            right: -72px;
+        }
+    }
+
+    &__content-box{
+        position: relative;
+        max-width: 402px;
+        width: 100%;
+        &::before{
+            content: "";
+            --size: 500px;
+            position: absolute;
+            background: center / contain no-repeat;
+            z-index: -1;
+            background-image: url(./assets/img/decorate-contacts-accent.png);
+            width: var(--size);
+            height: var(--size);
+            top:0;
+            left: -100px;
+        }
+    }
+
+    &-socials{
+        display: flex;
+        flex-direction: column;
+        &__item{
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            margin-bottom: 28px;
+        }
+
+        &__text{
+            color: #fff;
+            font-size: 32px;
+            font-weight: 500;
+        }
+    }
+
+    &-phones{
+        @extend .contacts-socials;
+        &__item{
+            @extend .contacts-socials__item;
+        } 
+        &__text{
+            @extend .contacts-socials__text;
+        }   
+    }
+
+    &__img-box{
+        max-width: 354px;
+        width: 100%;
+        position: relative;
+
+        img{
+            @include clip-top-left;
+        }
+
+        &::before{
+            content: "";
+            background-color: $primary-color;
+            top: 28px;
+            right: -34px;
+            width: calc(100% - 3px);
+            height: calc(100% - 3px);
+            position: absolute;
+            z-index: -1;
+            @include clip-top-left;
+        }
+
+        &::after{
+            content: "";
+            --size: 500px;
+            position: absolute;
+            background: center / contain no-repeat;
+            z-index: -1;
+            background-image: url(./assets/img/decorate-contacts-accent-s.png);
+            width: var(--size);
+            height: var(--size);
+            top: -174px;
+            left: -234px
+        }
+
+    }
+
+    &-line{
+        position: absolute;
+        top: 12px;
+        right: 514px;
+        z-index: -1;
+    }
+}

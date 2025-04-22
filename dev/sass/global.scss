@@ -92,7 +92,9 @@ section{
 
 .template-description{
     @extend h6;
-    color: $text;
+    h6{
+        color: $text;
+    }
     font-weight: 400;
     margin-bottom: 54px;
     max-width: 480px;

@@ -51,9 +51,9 @@ $section-mobile-margin: 64px;
     mask: url(./assets/img/we-make___bg-bottom-right.svg);
 }
 
-@mixin clip-left{
-    -webkit-mask: url(./assets/img/we-make__bg-left.svg);
-    mask: url(./assets/img/we-make__bg-left.svg);
+@mixin clip-top-left{
+    -webkit-mask: url(./assets/img/we-make___bg-top-left.svg);
+    mask: url(./assets/img/we-make___bg-top-left.svg);
 }
 
 
