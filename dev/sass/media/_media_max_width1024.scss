@@ -40,7 +40,10 @@
     }
 
     .template-description{
-        font-size: 0.75rem;
+        font-size: 0.85rem;
+        h6{
+            font-size: 0.85rem;
+        }
     }
 
     .banner{
@@ -264,6 +267,77 @@
 
             svg{
                 height: 22px;
+            }
+        }
+    }
+
+    .contacts{
+        .container{
+            flex-direction: column-reverse;
+            gap: 40px 0;
+            max-width: 530px;
+            &::before{
+                visibility: hidden;
+            }
+        }
+
+        &__content-box{
+            &::before{
+                --size: 200px;
+                background-image: url(./assets/img/decorate-contacts-light-s.png);
+                top:0;
+                left: 30px;
+            }
+        }
+
+        &__img-box{
+            margin-left: auto;
+            max-width: 160px;
+
+            img{
+                @include clip-top-left-sm;
+            }
+
+            &::before{
+                top: 12px;
+                right: -16px;
+                @include clip-top-left-sm;
+            }
+
+            &::after{
+                left: -200px;
+            }
+        }
+
+        &-line{
+            visibility: hidden;
+        }
+
+        &-line-sm{
+            visibility: visible;
+            top: -54px;
+            right: 17px;
+        }
+
+        .accent-label-sm{
+            top: 78px;
+            left: -258px;
+        }
+
+        &-socials{
+            &__text{
+                font-size: 22px;
+            }
+
+            &__img{
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        &-phones{
+            &__img{
+                @extend .contacts-socials__img;
             }
         }
     }

@@ -62,6 +62,9 @@
         &__text{
             @extend .contacts-socials__text;
         }   
+        &__img{
+            @extend .contacts-socials__img;
+        }
     }
 
     &__img-box{
@@ -101,6 +104,14 @@
     }
 
     &-line{
+        position: absolute;
+        top: 12px;
+        right: 514px;
+        z-index: -1;
+    }
+
+    &-line-sm{
+        visibility: hidden;
         position: absolute;
         top: 12px;
         right: 514px;
